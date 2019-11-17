@@ -1,0 +1,246 @@
+/* Block */
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: #f5f5f5;
+}
+
+button:focus {
+    outline: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    width: 100%;
+    padding-right: 0 !important;
+    background-color: black;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+.modal {
+    padding-right: 0 !important;
+}
+
+.modal-open {
+    padding-right: 0 !important;
+    overflow-y: scroll !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.btn__signin {
+    font-size: 21px;
+    padding: 5px 12px 2px;
+    background-color: #EA8025;
+    color: white;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+.btn__signup {
+    font-size: 21px;
+    padding: 2px 12px;
+    padding: 5px 12px 2px;
+    background-color: #f5f5f5;
+    color: black;
+    text-transform: uppercase;
+}
+
+.logo {
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.logo:hover {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.menu__item {
+    line-height: normal;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.menu__item:hover {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.menu__link {
+    position: relative;
+    font-size: 21px;
+    font-weight: 400;
+    color: white;
+    margin: 0 20px;
+    text-transform: uppercase;
+}
+
+.menu__link:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 4px;
+    background-color: #EA8025;
+    transition: all 0.4s;
+}
+
+.menu__link:hover {
+    color: white;
+}
+
+.menu__link:hover:before {
+    width: 100%;
+}
+
+/* Cover */
+
+.cover {
+    padding-top: 100px;
+}
+
+.carousel-indicators {
+    bottom: -55px;
+}
+
+.carousel-indicators li {
+    background-color: black;
+    width: 40px;
+    height: 6px;
+}
+
+/* Menu */
+
+.menu {
+    position: relative;
+    margin-top: 100px;
+    padding-bottom: 200px;
+}
+
+.menu__bg--top {
+    position: absolute;
+    top: -40px;
+    right: 50px;
+    width: 300px;
+    opacity: 0.2;
+}
+
+.menu__title {
+    position: relative;
+    color: #EA8025;
+    font-weight: 700;
+    letter-spacing: 2px;
+    float: left;
+}
+
+.menu__title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 50%;
+    height: 4px;
+    background-color: black;
+}
+
+.menu__button {
+    float: right;
+}
+
+.menu__button--link {
+    position: relative;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 21px;
+    color: white;
+    border: 3px solid black;
+    transition: all .35s;
+    background-color: black;
+}
+
+.menu__button--link span {
+    position: relative;
+    z-index: 2;
+}
+
+.menu__button--link::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 95%;
+    background-color: #f5f5f5;
+    transition: all .35s;
+}
+
+.menu__button--link:hover {
+    color: black;
+}
+
+.menu__button--link:hover::before {
+    width: 99%;
+}
+
+.btn__buynow {
+    position: relative;
+    width: 100px;
+    font-size: 18px;
+    color: white;
+    border: 3px solid #EA8025;
+    transition: all .35s;
+    background-color: #EA8025;
+}
+
+.btn__buynow span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn__buynow::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 95%;
+    background-color: #f5f5f5;
+    transition: all .35s;
+}
+
+.btn__buynow:hover {
+    color: #EA8025;
+}
+
+.btn__buynow:hover::before {
+    width: 99%;
+}
