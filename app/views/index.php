@@ -17,6 +17,8 @@
     <!-- Owl carousel -->
     <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/css/aos.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
     <title>The Coffee House</title>
     <link rel="stylesheet" href="../../assets/css/style.css" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -32,10 +34,14 @@
     <!-- Modal signin -->
     <?php include 'signin-modal.php'?>
 
+    <!-- Modal cart -->
+    <?php include 'cart-modal.php'?>
+
+
     <!-- Cover -->
     <section class="cover">
         <div id="cover__carousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators wow slideInUp">
                 <li data-target="#cover__carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#cover__carousel" data-slide-to="1"></li>
                 <li data-target="#cover__carousel" data-slide-to="2"></li>
@@ -53,11 +59,11 @@
                 </div>
             </div>
 
-            <a class="carousel-control-prev" href="#cover__carousel" role="button" data-slide="prev">
+            <a class="carousel-control-prev wow jackInTheBox" href="#cover__carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#cover__carousel" role="button" data-slide="next">
+            <a class="carousel-control-next wow jackInTheBox" href="#cover__carousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -71,7 +77,8 @@
             </div>
             <h1 class="menu__title section__title">MENU</h1>
             <div class="menu__button">
-                <a class="menu__button--link text-center d-block" href="menu-page.php"><span>XEM TẤT CẢ SẢN PHẨM</span></a>
+                <a class="menu__button--link text-center d-block" href="menu-page.php"><span>XEM TẤT CẢ SẢN
+                        PHẨM</span></a>
             </div>
             <div class="clear"></div>
 
@@ -88,7 +95,7 @@
             <h1 class="stores__title section__title">CỬA HÀNG</h1>
             <div class="signature__store mt-4">
                 <div class="row align-items-center">
-                    <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 padding__right'>
+                    <div data-aos="fade-right" class='col-lg-6 col-md-12 col-sm-12 col-xs-12 padding__right'>
                         <div class="signature__store--text">
                             <h5>THE COFFEE HOUSE SIGNATURE</h5>
                             <p>Với những nghệ nhân rang tâm huyết và đội ngũ Barista tài năng cùng những câu chuyện cà
@@ -96,7 +103,7 @@
                                 riêng cho những ai trót yêu say đắm hương vị của những hạt cà phê tuyệt hảo.</p>
                         </div>
                     </div>
-                    <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 padding__left'>
+                    <div data-aos="fade-left" class='col-lg-6 col-md-12 col-sm-12 col-xs-12 padding__left'>
                         <div class="signature__store--img">
                             <img src="//file.hstatic.net/1000075078/file/3e0a8783_master.jpg" width="100%"
                                 alt="thecoffeehouse-signature">
@@ -104,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="stores__list mt-4">
+            <div data-aos="fade-up" class="stores__list mt-4">
                 <div class="owl-carousel">
                     <?php include 'stores.php'?>
                 </div>
@@ -117,15 +124,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Owl carousel -->
     <script src="../../assets/js/owl.carousel.min.js"></script>
@@ -149,6 +156,17 @@
         }
     })
     </script>
+    <script src="../../assets/js/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src="../../assets/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="../models/Orders.js"></script>
+    <script src="../models/OrderItem.js"></script>
+    <script src="../services/OrderService.js"></script>
+    <script src="../services/UserService.js"></script>
+    <script src="../controllers/main.js"></script>
 </body>
 
 </html>

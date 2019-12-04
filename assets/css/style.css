@@ -78,6 +78,11 @@ a, a:hover, a:focus {
     overflow-y: scroll !important;
 }
 
+.btn__submit {
+    background-color: #EA8025;
+    color: white
+}
+
 .clear {
     clear: both;
 }
@@ -566,7 +571,37 @@ a, a:hover, a:focus {
     }
 }
 
-@media screen and (max-width: 576px) {}
+/* Cart */
+
+.btn__quantity {
+    border-radius: 5px;
+    line-height: 6px;
+    background-color: black;
+    color: white;
+    padding: 6px;
+}
+
+.btn__quantity:hover {
+    color: white;
+}
+
+.menu__cart {
+    position: relative;
+}
+
+.menu__cart .cart__quantity {
+    position: absolute;
+    bottom: -25%;
+    right: 15%;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 0.65rem;
+    color: white;
+    background-color: #EA8025;
+    border-radius: 50%;
+}
 
 /* Footer */
 

@@ -2,7 +2,7 @@
 // Create connection
 $conn = include('./config/connection.php');
 
-$sql = "SELECT * FROM products WHERE product_id = '".$_GET['id']."'";
+$sql = "SELECT * FROM products WHERE product_id = '".$_GET['id']."' LIMIT 1";
 $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();

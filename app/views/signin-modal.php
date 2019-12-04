@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="">
+                <form method="POST" id="signin-form">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" id="signin-username" aria-describedby="emailHelp"
@@ -19,7 +19,7 @@
                         <input type="password" class="form-control" id="signin-password" placeholder="Enter password"
                             name="password" autocomplete="signin-password" />
                     </div>
-                    <input type="submit" id="signin-submit" class="btn btn-success w-100 my-3" name="signin" value="ĐĂNG NHẬP" />
+                    <button type="submit" id="signin-submit" class="btn btn__submit w-100 mt-3">ĐĂNG NHẬP</button>
                 </form>
             </div>
         </div>
