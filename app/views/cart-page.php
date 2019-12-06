@@ -1,12 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Font Yanone Kaffeesatz -->
     <link
@@ -19,7 +18,7 @@
     <link rel="stylesheet" href="../../assets/css/aos.css">
     <!-- Animate -->
     <link rel="stylesheet" href="../../assets/css/animate.css">
-    <title>Product detail</title>
+    <title>The Coffee House</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
@@ -34,34 +33,19 @@
     <!-- Modal signin -->
     <?php include 'signin-modal.php'?>
 
-    <!-- Modal cart -->
-    <?php include 'cart-modal.php'?>
-
-    <!-- Product detail container -->
-    <section class="product__detail">
+    <section class="cart">
         <div class="container">
+            <h1 class="cart__title section__title">GIỎ HÀNG</h1>
+            <div class="cart__content mt-4">
+                <div class="row align-items-center">
+                    <div data-aos="fade-right" class='col-lg-8 col-md-12 col-sm-12 col-xs-12'>
+                        <div class="order__list">
+                            Chưa phát triển chức năng này T.T
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" class='col-lg-4 col-md-12 col-sm-12 col-xs-12'>
 
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <?php include 'breadcrumb-3.php'?>
-                </ol>
-            </nav>
-
-            <!-- Product information -->
-            <div class="row align-items-center">
-                <?php include 'product-detail-container.php'?>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="youlike bg__dark">
-        <div class="container">
-            <h1 class="youlike__title section__title">CÓ THỂ BẠN THÍCH</h1>
-            <div class="youlike__list mt-5">
-                <div class="row">
-                    <?php include 'youlike.php'?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,17 +56,16 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <!-- AOS -->
     <script src="../../assets/js/aos.js"></script>
     <script>
     AOS.init()
@@ -91,6 +74,11 @@
     <script>
     new WOW().init();
     </script>
+    <script src="../models/Orders.js"></script>
+    <script src="../models/OrderItem.js"></script>
+    <script src="../services/OrderService.js"></script>
+    <script src="../services/UserService.js"></script>
+    <script src="../controllers/main.js"></script>
 </body>
 
 </html>

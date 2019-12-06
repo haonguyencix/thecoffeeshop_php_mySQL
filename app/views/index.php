@@ -17,11 +17,13 @@
     <!-- Owl carousel -->
     <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css">
+    <!-- Animate on Scroll -->
     <link rel="stylesheet" href="../../assets/css/aos.css">
+    <!-- Animate -->
     <link rel="stylesheet" href="../../assets/css/animate.css">
     <title>The Coffee House</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="../../assets/css/style.css" />
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,6 @@
 
     <!-- Modal cart -->
     <?php include 'cart-modal.php'?>
-
 
     <!-- Cover -->
     <section class="cover">

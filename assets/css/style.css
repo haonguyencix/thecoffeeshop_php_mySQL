@@ -603,6 +603,14 @@ a, a:hover, a:focus {
     border-radius: 50%;
 }
 
+.cart {
+    padding-top: 100px;
+}
+
+.cart__title::before {
+    background-color: black;
+}
+
 /* Footer */
 
 .footer {

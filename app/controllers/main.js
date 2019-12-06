@@ -37,12 +37,22 @@ $(document).ready(function() {
       .done(function(result) {
         if (result === "Đăng nhập thành công!") {
           $("#signin").modal("toggle");
-          swal("Đăng nhập thành công!", "Chọn OK để tiếp tục", "success")
-          .then(() => location.reload());
+          swal(
+            "Đăng nhập thành công!",
+            "Chọn OK để tiếp tục",
+            "success"
+          ).then(() => location.reload());
         } else if (result === "Sao không chịu nhập gì hết vậy!") {
           swal("Sao không chịu nhập gì hết vậy", "Kiểm tra lại nè", "warning");
-        } else if (result === "Tên đăng nhập này không tồn tại!" || result === "Sai mật khẩu rồi chời ơi!") {
-          swal("Tài khoản hay là mật khẩu gì đó bị sai rồi!", "Kiểm tra lại nè", "error");
+        } else if (
+          result === "Tên đăng nhập này không tồn tại!" ||
+          result === "Sai mật khẩu rồi chời ơi!"
+        ) {
+          swal(
+            "Tài khoản hay là mật khẩu gì đó bị sai rồi!",
+            "Kiểm tra lại nè",
+            "error"
+          );
         }
       })
       .fail(function(err) {
@@ -58,11 +68,18 @@ $(document).ready(function() {
       .done(function(result) {
         if (result === "Đăng kí thành công!") {
           $("#signup").modal("toggle");
-          swal("Đăng ký thành công!", "Bạn có thể đăng nhập được rồi, hì hì!", "success")
-          .then(() => location.reload());
+          swal(
+            "Đăng ký thành công!",
+            "Bạn có thể đăng nhập được rồi, hì hì!",
+            "success"
+          ).then(() => location.reload());
         } else if (result === "Tài khoản hoặc email có rồi!") {
-          swal("Tài khoản hoặc là email có rồi bạn ơi!", "Ráng kiếm gì hay hay đặt đi!", "warning");
-        };
+          swal(
+            "Tài khoản hoặc là email có rồi bạn ơi!",
+            "Ráng kiếm gì hay hay đặt đi!",
+            "warning"
+          );
+        }
       })
       .fail(function(err) {
         console.log(err);
@@ -75,8 +92,11 @@ $(document).ready(function() {
       .logout()
       .done(function(result) {
         if (result === "Đăng xuất thành công!") {
-          swal("Đăng xuất thành công!", "Chọn OK để tiếp tục", "success")
-          .then(() => location.reload());
+          swal(
+            "Đăng xuất thành công!",
+            "Chọn OK để tiếp tục",
+            "success"
+          ).then(() => location.reload());
         }
       })
       .fail(function(err) {
@@ -102,15 +122,15 @@ $(document).ready(function() {
 
   $("#addCart").click(function(e) {
     e.preventDefault();
-    swal("Thêm vào thành công", "Chọn OK để tiếp tục", "success");
-    $("#cart").modal("toggle");
     let id = Math.random()
       .toString(36)
       .substr(2, 9);
-    let order = new OrderItem(id, productId, total, quantity);
-    orderService.addToCart(order);
-    $("#cartQuantity").html(orderService.cartList.length);
+    let orderItem = new OrderItem(id, productId, total, quantity);
+    orderService.addToCart(orderItem);
     setLocalStorage("cartList", orderService.cartList);
+    swal("Thêm vào thành công", "Chọn OK để tiếp tục", "success");
+    $("#cart").modal("toggle");
+    $("#cartQuantity").html(orderService.cartList.length);
   });
 
   $("#cartQuantity").html(orderService.cartList.length);
