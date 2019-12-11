@@ -7,6 +7,12 @@ $username = mysqli_real_escape_string($conn, $_POST['username']);
 $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
 $password = md5($_POST['password']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+// Kiểm tra đã nhập đầy đủ thông tin chưa
+if (!$username || $fullname || !$password || $email) {
+    echo "Nhập bị thiếu rồi!";
+    exit;
+}
  
 // Attempt insert query execution
 $sql1 = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
@@ -29,5 +35,5 @@ if($result1->num_rows > 0){
 }
  
 // Close connection
-mysqli_close($conn);    
+$conn->close();    
 ?>

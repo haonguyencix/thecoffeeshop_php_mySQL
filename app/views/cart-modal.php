@@ -30,7 +30,8 @@
                     <div class="form-group mt-3">
                         <label for="notes">Ghi chú: </label>
                         <textarea type="text" class="form-control" placeholder="Ghi chú ở đây" name="notes"
-                            autocomplete="notes" rows="3"></textarea>
+                            autocomplete="notes" rows="3">
+                        </textarea>
                     </div>
                     <button type="submit" class="btn btn__submit w-100 mt-3" id="addCart">THÊM VÀO GIỎ</button>
                 </form>

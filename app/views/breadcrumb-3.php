@@ -9,13 +9,25 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
 if ($result->num_rows > 0) {
-    echo "<li class='breadcrumb-item'><a href='menu-page.php'>MENU</a></li>";
-    echo "<li class='breadcrumb-item'><a href='#'>".mb_strtoupper($row["category_name"])."</a></li>";
-    echo "<li class='breadcrumb-item active' aria-current='page'>".mb_strtoupper($row["product_name"])."</li>";
+?>
+<li class='breadcrumb-item'>
+    <a href='menu-page.php'>
+        MENU
+    </a>
+</li>
+<li class='breadcrumb-item'>
+    <a href='#'>
+        <?php echo mb_strtoupper($row["category_name"]) ?>
+    </a>
+</li>
+<li class='breadcrumb-item active' aria-current='page'>
+    <?php mb_strtoupper($row["product_name"]) ?>
+</li>
+<?php
 } else {
     echo "0 results";
 }
 
 // Close connection
-mysqli_close($conn);
+$conn->close();
 ?>

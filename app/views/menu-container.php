@@ -23,5 +23,5 @@ if ($result->num_rows > 0) {
 }
 
 // Close connection
-mysqli_close($conn);
+$conn->close();
 ?>

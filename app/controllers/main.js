@@ -42,8 +42,8 @@ $(document).ready(function() {
             "Chọn OK để tiếp tục",
             "success"
           ).then(() => location.reload());
-        } else if (result === "Sao không chịu nhập gì hết vậy!") {
-          swal("Sao không chịu nhập gì hết vậy", "Kiểm tra lại nè", "warning");
+        } else if (result === "Nhập bị thiếu rồi!") {
+          swal("Nhập bị thiếu gì đó rồi bạn ơi!", "Kiểm tra lại nè", "warning");
         } else if (
           result === "Tên đăng nhập này không tồn tại!" ||
           result === "Sai mật khẩu rồi chời ơi!"
@@ -73,6 +73,8 @@ $(document).ready(function() {
             "Bạn có thể đăng nhập được rồi, hì hì!",
             "success"
           ).then(() => location.reload());
+        } else if (result === "Nhập bị thiếu rồi!") {
+          swal("Nhập bị thiếu gì đó rồi bạn ơi!", "Kiểm tra lại nè", "warning");
         } else if (result === "Tài khoản hoặc email có rồi!") {
           swal(
             "Tài khoản hoặc là email có rồi bạn ơi!",

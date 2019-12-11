@@ -11,7 +11,7 @@ session_start();
      
     //Kiểm tra đã nhập đủ tên đăng nhập với mật khẩu chưa
     if (!$username || !$password) {
-        echo "Sao không chịu nhập gì hết vậy!";
+        echo "Nhập bị thiếu rồi!";
         exit;
     }
     
@@ -42,5 +42,5 @@ session_start();
     }
     
     // Close connection
-    mysqli_close($conn);
+    $conn->close();
 ?>
