@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
     </a>
 </li>
 <li class='breadcrumb-item active' aria-current='page'>
-    <?php mb_strtoupper($row["product_name"]) ?>
+    <?php echo mb_strtoupper($row["product_name"]) ?>
 </li>
 <?php
 } else {
