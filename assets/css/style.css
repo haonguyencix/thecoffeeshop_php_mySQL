@@ -92,6 +92,16 @@ a, a:hover, a:focus {
     padding: 80px 0 60px;
 }
 
+.border__left--orange::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #EA8025;
+}
+
 .section__title {
     position: relative;
     color: #EA8025;
@@ -185,6 +195,33 @@ a, a:hover, a:focus {
 
 .menu__link:hover:before {
     width: 100%;
+}
+
+.menu__nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 80px;
+    left: 0;
+    background-color: white;
+    margin-top: 146px;
+}
+
+.category__item {
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.category__item:hover {
+    color: #EA8025;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.category__title::before {
+    background-color: black;
 }
 
 @media screen and (max-width: 992px) {
@@ -411,7 +448,7 @@ a, a:hover, a:focus {
 
 .product__detail {
     position: relative;
-    padding-top: 75px;
+    padding-top: 80px;
     margin-bottom: 100px;
 }
 

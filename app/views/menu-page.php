@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- Font Yanone Kaffeesatz -->
     <link
-        href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&display=swap&subset=vietnamese"
+        href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,500,600,700&display=swap&subset=vietnamese"
         rel="stylesheet" />
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -33,15 +33,27 @@
     <?php include 'signin-modal.php'?>
 
     <!-- Product list container -->
-    <section class="product__detail">
+    <section class="menu__page">
         <div class="container">
-            <div class="menu__list mt-5">
-                <div class="row">
-                    <?php include 'menu-container.php'?>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="menu__nav border__left--orange">
+                        <ul class="list-unstyled px-4 py-2">
+                            <?php include 'menu-navigation.php'?>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <div class="menu__list">
+                        <?php include 'menu-container.php'?>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <?php include 'footer.php'?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
