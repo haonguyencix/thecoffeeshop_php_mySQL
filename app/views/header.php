@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
         <nav class="navbar navbar-expand-lg">
-            <ul class="logo list-unstyled mb-0 wow flipInX">
+            <ul class="logo list-unstyled mb-0 wow flipInY">
                 <li>
                     <a href="index.php"><img src="../../assets/img/main-logo.png" alt="logo" width="100%" /></a>
                 </li>

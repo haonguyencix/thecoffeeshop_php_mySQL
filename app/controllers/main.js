@@ -77,7 +77,7 @@ $(document).ready(function() {
           swal("Nhập bị thiếu gì đó rồi bạn ơi!", "Kiểm tra lại nè", "warning");
         } else if (result === "Tài khoản hoặc email có rồi!") {
           swal(
-            "Tài khoản hoặc là email có rồi bạn ơi!",
+            "Tài khoản hoặc email tồn tại rồi bạn ơi!",
             "Ráng kiếm gì hay hay đặt đi!",
             "warning"
           );

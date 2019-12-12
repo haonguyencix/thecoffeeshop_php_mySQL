@@ -2,7 +2,7 @@
 // Create connection
 $conn = include("./config/connection.php");
 
-$sql = "SELECT * FROM products ORDER BY category_id DESC LIMIT 6";
+$sql = "SELECT * FROM products WHERE category_id = 606 LIMIT 6";
 
 $result = $conn->query($sql);
 

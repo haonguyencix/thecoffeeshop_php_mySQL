@@ -2,7 +2,7 @@
 // Create connection
 $conn = include('./config/connection.php');
 
-$sql = "SELECT * FROM products ORDER BY RAND() LIMIT 3";
+$sql = "SELECT * FROM products WHERE category_id = 606 ORDER BY category_id DESC LIMIT 3";
 
 $result = $conn->query($sql);
 

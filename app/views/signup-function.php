@@ -9,7 +9,7 @@ $password = md5($_POST['password']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 
 // Kiểm tra đã nhập đầy đủ thông tin chưa
-if (!$username || $fullname || !$password || $email) {
+if (!$username || !$fullname || !$password || !$email) {
     echo "Nhập bị thiếu rồi!";
     exit;
 }
